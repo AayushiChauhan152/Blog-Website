@@ -1,27 +1,25 @@
 import mongoose from "mongoose";
 import { createToken } from "../services/authentication.js";
 
-const schema = new mongoose.Schema(
-  {
-    name: {
-      type: String,
-    },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    password: {
-      type: String,
-      required: true,
-    },
-    role: {
-      type: String,
-      enum: ["USER", "ADMIN"],
-      default: "USER",
-    },
+const schema = new mongoose.Schema({
+  name: {
+    type: String,
   },
-);
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  role: {
+    type: String,
+    enum: ["USER", "ADMIN"],
+    default: "USER",
+  },
+});
 
 schema.static(
   "matchPasswordandGenerateToken",
