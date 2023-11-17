@@ -21,7 +21,6 @@ const schema = new mongoose.Schema(
       default: "USER",
     },
   },
-  { timestamps: true }
 );
 
 schema.static(
