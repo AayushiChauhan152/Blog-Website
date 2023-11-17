@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign in</title>
+    <%- include("header.ejs")%>
+  </head>
+  <body>
+    <%- include("nav.ejs")%>
+
+    <div class="container mt-4">
+      <h1><%= Blog.title %></h1>
+      <img src="<%= Blog.coverImage %>" alt="" width="300px" />
+      <p><%= Blog.content %></p>
+    </div>
+
+    <div class="container mt-4">
+      <p>- <%= u[0].name %></p>
+    </div>
+
+    <%- include("footer.ejs")%>
+  </body>
+</html>
+

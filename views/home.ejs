@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home Page</title>
+    <%- include("header.ejs")%>
+  </head>
+  <body>
+    <%- include("nav.ejs")%>
+
+    <div class="container mt-3 row row-cols-4">
+      <% blogs.forEach(blog=> { %>
+
+      <div class="col">
+        <div class="card col" style="width: 18rem">
+          <img src="<%= blog.coverImage %>" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-atitle"><%= blog.title %></h5>
+
+            <a href="/blog/<%= blog._id %>" class="btn btn-primary">view</a>
+            <a href="/blog/dlt/<%= blog._id%>" class="btn btn-primary"
+              >delete</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <% }) %>
+    </div>
+
+    <%-include("footer.ejs")%>
+  </body>
+</html>
