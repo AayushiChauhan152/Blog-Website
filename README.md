@@ -21,5 +21,5 @@ npm install
 ## Run
 
 ```bash
-nodemon urlShortener.js
+nodemon app.js
 ```
